@@ -109,3 +109,10 @@ protoc --python_out=./ keyvalue.proto
 - Kartik Deshpande
 - Vipul Chaskar
 - Ashish Kenjale 
+
+
+## References
+- Cassendra http://cassandra.apache.org/ 
+  https://www.facebook.com/notes/facebook-engineering/cassandra-a-structured-storage-system-on-a-p2p-network/24413138919/
+- Dynamo: Amazon’s Highly Available Key-value Store Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels
+- Protobuf https://developers.google.com/protocol-buffers/
