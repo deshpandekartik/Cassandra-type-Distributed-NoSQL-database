@@ -106,9 +106,9 @@ protoc --python_out=./ keyvalue.proto
 ![alt text](https://github.com/deshpandekartik/Cassendra-type-Distributed-NoSQL-database/blob/master/controlflow.png)
 
 ### Contributors:
-- Kartik Deshpande
-- Vipul Chaskar
-- Ashish Kenjale 
+- [Kartik Deshpande](https://www.linkedin.com/in/kartik-deshpande/)
+- [Vipul Chaskar](https://www.linkedin.com/in/vipul-chaskar-50808757/)
+- [Ashish Kenjale](https://www.linkedin.com/in/ashish-kenjale/)
 
 
 ## References
