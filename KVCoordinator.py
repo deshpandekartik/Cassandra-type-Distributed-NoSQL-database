@@ -11,7 +11,6 @@ from KVStore import KVStore
 from KVConsistency import KVConsistency
 from SocketPool import SocketPool
 
-sys.path.append('/home/phao3/protobuf/protobuf-3.4.0/python')
 import keyvalue_pb2
 
 class MyServer(SocketServer.ThreadingTCPServer):

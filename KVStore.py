@@ -6,7 +6,6 @@ import sys
 import SocketServer
 from threading import Lock,Thread
 import socket
-sys.path.append('/home/phao3/protobuf/protobuf-3.4.0/python')
 import keyvalue_pb2
 
 class KVStore:

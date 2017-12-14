@@ -3,7 +3,6 @@
 
 import sys
 import socket
-sys.path.append('/home/phao3/protobuf/protobuf-3.4.0/python')
 import keyvalue_pb2
 
 MAX_REQUEST_SIZE = 10000
