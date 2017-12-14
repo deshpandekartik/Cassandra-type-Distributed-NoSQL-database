@@ -41,3 +41,11 @@ succeeded, ONE or TWO, it will respond successful to the client. However, if not
 have succeeded but one replica server has failed, the coordinator would store a “hint” locally. If at a later time the
 failed server has recovered, it might be selected as coordinator for another client’s request. This will allow other
 replica servers that have stored “hints” for it to know it has recovered and send over the stored hints.
+
+
+## Client
+Once started,
+the client will act as a console, allowing users to issue a stream of requests. The client selects one replica server
+as the coordinator for all its requests. That is, all requests from a single client are handled by the same coordinator.
+The key value store is configured to launch multiple clients, potentially issue requests to different coordinators at the same time.
+
