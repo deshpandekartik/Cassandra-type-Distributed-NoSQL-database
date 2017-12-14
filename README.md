@@ -2,7 +2,7 @@
 A cassendra type Eventually Consistent Key-Value Store 
 borrows most of designs from Dynamo and Cassandra
 
-## Requirenments -:
+## Requirenments
 
 - Python 2.7
 - Google's protocol buffer
@@ -100,6 +100,10 @@ File keyvalue.proto defines the messages to be transmitted among co-ordinator's 
 ```
 protoc --python_out=./ keyvalue.proto
 ```
+
+## DataFlow
+
+![alt text](https://github.com/deshpandekartik/Cassendra-type-Distributed-NoSQL-database/blob/master/controlflow.png)
 
 ### Contributors:
 - Kartik Deshpande
