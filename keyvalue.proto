@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+message PutRequest {
+    uint32 id = 1;
+    uint32 key = 2;
+    string value = 3;
+    uint32 consistency_level = 4; 
+}
+
+message GetRequest {
+    uint32 id = 1;
+    uint32 key = 2;
+    uint32 consistency_level = 3;
+}
+
+message ClientResponse {     // Response from server to client
+    uint32 id = 1;
+    uint32 key = 2;
+    bool status = 3;        // success or failure
+    string value = 4;        // Won’t be populated when it’s response for PutRequest.
+}
+
+message PutRequestSrv {
+    uint32 id = 1;
+    uint32 key = 2;
+    string value = 3;
+    uint32 timestamp = 4;    // unix timestamp;. String okay? Or int32 or int64?
+}
+
+message GetRequestSrv {
+    uint32 id = 1;
+    uint32 key = 2;
+    uint32 timestamp = 3;
+}
+
+message ServerResponse {
+    uint32 id = 1;
+    uint32 key = 2;
+    bool status = 3;
+    string value = 4;        // Won’t be populated when it’s response for PutRequestSrv
+    uint32 timestamp = 5;
+    string nodeid = 6;
+}
+
+
+message KeyValueMessage {
+  oneof key_value_message {
+    PutRequest putrequest = 1;
+    GetRequest getrequest = 2;
+    ClientResponse clientresponse = 3;
+    PutRequestSrv putrequestsrv = 4;
+    GetRequestSrv getrequestsrv = 5;
+    ServerResponse serverresponse = 6;
+  }
+}
+
