@@ -1,5 +1,11 @@
 # Cassendra-type-Distributed-NoSQL-database
 A cassendra type Eventually Consistent Key-Value Store 
+borrows most of designs from Dynamo and Cassandra
+
+## Requirenments -:
+
+- Python 2.7
+- Google's protocol buffer
 
 ## Key-Value store
 
@@ -42,6 +48,32 @@ have succeeded but one replica server has failed, the coordinator would store a 
 failed server has recovered, it might be selected as coordinator for another client’s request. This will allow other
 replica servers that have stored “hints” for it to know it has recovered and send over the stored hints.
 
+A co-ordinator is configured to use either **Hinted handoff** or **Read Repair**
+
+To start a co-ordinator in Hinted handoff
+
+```
+python KVCoordinator.py nodename PORTNUM replicas.txt HINTED-HANDOFF
+
+```
+To start a co-ordinator in Read Repair 
+
+```
+python KVCoordinator.py nodename PORTNUM replicas.txt READ-REPAIR
+
+```
+
+
+For example, if four co-ordinator's with names: “node1”, “node2”, “node3”, and “node4” are running on
+128.226.180.167 port 9090, 9091, 9092, and 9093, then replicas.txt should contain:
+
+```
+node1 128.226.180.167 9090
+node2 128.226.180.167 9091
+node3 128.226.180.167 9092
+node4 128.226.180.167 9093
+```
+
 
 ## Client
 Once started,
@@ -49,3 +81,27 @@ the client will act as a console, allowing users to issue a stream of requests. 
 as the coordinator for all its requests. That is, all requests from a single client are handled by the same coordinator.
 The key value store is configured to launch multiple clients, potentially issue requests to different coordinators at the same time.
 
+
+To start a client 
+
+If the client wants to select a node running on 128.226.180.167 and port 9090 as its co-ordinator 
+
+```
+python KVclient.py  128.226.180.167 9090
+
+```
+
+Client can issue get and put request's to co-ordinator
+
+## Message Transfer 
+
+File keyvalue.proto defines the messages to be transmitted among co-ordinator's and from client's in protocol buffer
+
+```
+protoc --python_out=./ keyvalue.proto
+```
+
+### Contributors:
+- Kartik Deshpande
+- Vipul Chaskar
+- Ashish Kenjale 
