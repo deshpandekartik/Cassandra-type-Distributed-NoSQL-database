@@ -1,6 +1,6 @@
 # Cassendra-type-Distributed-NoSQL-database
 A cassendra type Eventually Consistent Key-Value Store 
-borrows most of designs from Cassandra and some from Dynamo.
+borrows most of its designs from Cassandra and some from Dynamo.
 
 ## Requirenments
 
