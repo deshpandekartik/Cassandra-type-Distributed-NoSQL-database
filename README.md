@@ -1,5 +1,5 @@
-# Cassendra-type-Distributed-NoSQL-database
-A cassendra type Eventually Consistent Key-Value Store 
+# Cassandra-type-Distributed-NoSQL-database
+A Cassandra type Eventually Consistent Key-Value Store 
 borrows most of its designs from Cassandra and some from Dynamo.
 
 ## Requirenments
@@ -103,7 +103,7 @@ protoc --python_out=./ keyvalue.proto
 
 ## DataFlow
 
-![alt text](https://github.com/deshpandekartik/Cassendra-type-Distributed-NoSQL-database/blob/master/controlflow.png)
+![alt text](https://github.com/deshpandekartik/Cassandra-type-Distributed-NoSQL-database/blob/master/controlflow.png)
 
 ### Contributors:
 - [Kartik Deshpande](https://www.linkedin.com/in/kartik-deshpande/)
@@ -112,7 +112,7 @@ protoc --python_out=./ keyvalue.proto
 
 
 ## References
-- Cassendra 
+- Cassandra 
   - http://cassandra.apache.org/ 
   - https://www.facebook.com/notes/facebook-engineering/cassandra-a-structured-storage-system-on-a-p2p-network/24413138919/
 - Dynamo: Amazon’s Highly Available Key-value Store Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels
