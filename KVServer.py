@@ -19,7 +19,7 @@ if __name__ == '__main__':
         else:
                 NodeName = sys.argv[1]
                 PORT = sys.argv[2]
-                HOST = socket.gethostbyname(socket.gethostname())
+                HOST = "localhost"
                 REPLICAFILE = sys.argv[3]
 		CONSISTENCY_TYPE = sys.argv[4]
 
